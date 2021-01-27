@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "973720721041",
+    "firebase_url": "https://tennistimetable-ee88a.firebaseio.com",
+    "project_id": "tennistimetable-ee88a",
+    "storage_bucket": "tennistimetable-ee88a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:973720721041:android:5f9fa56064dd3f4ff75130",
+        "android_client_info": {
+          "package_name": "com.example.tennistimetable"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "973720721041-jeo299h6vu6gttjl6rr18b6nfba4r1u6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoo7L5t3nzD__26TuqabpRvSD1UbBQ7h4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "973720721041-jeo299h6vu6gttjl6rr18b6nfba4r1u6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

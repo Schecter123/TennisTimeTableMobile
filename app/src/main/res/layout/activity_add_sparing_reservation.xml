@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context=".activities.AddSparingReservationActivity">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar_add_sparing_reservation_activity"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/introAppNameColor"
+                app:popupTheme="@style/AppTheme.PopupOverlay" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/intro_wallpapper"
+            android:orientation="vertical"
+            android:padding="@dimen/create_group_content_padding">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="@dimen/card_view_elevation"
+                app:cardCornerRadius="@dimen/card_view_corner_radius">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:padding="@dimen/card_view_layout_content_padding">
+
+                    <CalendarView
+                        android:id="@+id/reservation_calendar"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/segmented_court_sparing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        segmentedgroup:sc_border_width="2dp"
+                        segmentedgroup:sc_corner_radius="10dp"
+                        segmentedgroup:sc_tint_color="@color/introAppNameColor">
+
+                        <RadioButton
+                            android:id="@+id/rb_court1_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/court1" />
+
+                        <RadioButton
+                            android:id="@+id/rb_court2_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/court2" />
+
+                        <RadioButton
+                            android:id="@+id/rb_court3_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/court3" />
+
+                        <RadioButton
+                            android:id="@+id/rb_court4_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/court4" />
+                    </info.hoang8f.android.segmented.SegmentedGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_sparing_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/choose_time"
+                            android:visibility="gone">
+
+                        </TextView>
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_sparing_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/segmented_sparing_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:visibility="gone"
+                        segmentedgroup:sc_border_width="2dp"
+                        segmentedgroup:sc_corner_radius="10dp"
+                        segmentedgroup:sc_tint_color="@color/introAppNameColor">
+
+                        <RadioButton
+                            android:id="@+id/rb_length1_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/half_hour"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rb_length2_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hour"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rb_length3_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/hour_and_half"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:id="@+id/rb_length4_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/two_hours"
+                            android:visibility="gone" />
+                    </info.hoang8f.android.segmented.SegmentedGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp">
+
+                        <TextView
+                            android:id="@+id/tv_sparing_partner_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sparing_partner"
+                            android:visibility="gone" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner_partner_select"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:spinnerMode="dialog"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+
+                    <info.hoang8f.android.segmented.SegmentedGroup xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/segmented_sparing_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        segmentedgroup:sc_border_width="2dp"
+                        segmentedgroup:sc_corner_radius="10dp"
+                        segmentedgroup:sc_tint_color="@color/introAppNameColor">
+
+                        <RadioButton
+                            android:id="@+id/rb_single_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sparing_single" />
+
+                        <RadioButton
+                            android:id="@+id/rb_double_spar"
+                            style="@style/RadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sparing_doubles" />
+                    </info.hoang8f.android.segmented.SegmentedGroup>
+
+                    <Button
+                        android:id="@+id/btn_create_sparing_reservation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/create_group_btn_marginTop"
+                        android:background="@drawable/shape_button_rounded"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:paddingTop="@dimen/btn_paddingTopBottom"
+                        android:paddingBottom="@dimen/btn_paddingTopBottom"
+                        android:text="@string/add"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/btn_text_size" />
+
+                </LinearLayout>
+
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
